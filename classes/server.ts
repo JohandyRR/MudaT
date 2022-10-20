@@ -1,4 +1,6 @@
+
 import express from 'express';
+
 
 export default class Server {
 
@@ -6,12 +8,11 @@ export default class Server {
     public port: number = 3000;
 
     constructor() {
-
         this.app = express();
     }
-    
+
     start( callback: Function ) {
-        this.app.listen( this.port, callback as any );
+        this.app.listen(  this.port, callback );
     }
 
 }
